@@ -1,0 +1,21 @@
+enable
+config t
+
+int FastEthernet 0/1
+
+switchport mode access
+switchport access vlan 10
+switchport port-security
+switchport port-security 100
+switchport port-security violation restrict
+ 
+exit
+!
+
+int FastEthernet 0/1
+
+switchport mode trunk 
+switchport trunk encapsulation dot1q
+ 
+exit
+!

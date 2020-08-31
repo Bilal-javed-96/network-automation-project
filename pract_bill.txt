@@ -1,0 +1,18 @@
+[
+    {
+        "name": "FastEthernet 0/1",
+        "description": "first",
+        "vlan": "10",
+        "mode": "access",
+        "max_mac": "100",
+        "violation_action": "restrict"
+    },
+    {
+        "name": "FastEthernet 0/1",
+        "description": "second",
+        "vlan": "20",
+        "mode": "trunk",
+        "max_mac": "300",
+        "violation_action": "shutdown"
+    }
+]

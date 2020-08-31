@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Ethernet 0/1",
+        "description": "first interface",
+        "vlan": "10",
+        "mode": "access",
+        "max_mac": "20",
+        "violation_action": "restrict"
+    }
+]

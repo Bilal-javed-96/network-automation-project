@@ -1,0 +1,17 @@
+
+config t
+{% for device in devices %}
+int {{ device.name }}
+{% if device.mode == 'access' %}
+switchport mode access
+switchport access vlan {{ device.vlan }}
+switchport port-security
+switchport port-security {{ device.max_mac}}
+switchport port-security violation {{device.violation_action}}
+{% else %}
+switchport mode trunk 
+switchport trunk encapsulation dot1q
+{% endif %} 
+exit
+!
+{% endfor %}
